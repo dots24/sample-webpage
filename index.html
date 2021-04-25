@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Getting Clients IP</title>
+	<style>
+		p, h2 {
+			
+			color:orange;
+			font-size: 40px
+		
+		}
+		
+		
+	</style>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+
+	<script>
+		/* Add "https://api.ipify.org?format=json" statement
+		this will communicate with the ipify servers in
+		order to retrieve the IP address $.getJSON will
+		load JSON-encoded data from the server using a
+		GET HTTP request */
+
+		$.getJSON("https://api.ipify.org?format=json",
+										function(data) {
+
+			// Setting text of element P with id gfg
+			$("#gfg").html(data.ip);
+			
+		})
+	</script>
+</head>
+
+<body bgcolor="#008080">
+	<center>
+		<h1>
+		<img border="0" src="https://www.threatstack.com/wp-content/uploads/2017/09/right-csp-twitter-card.png" width="900" height="201"></h1>
+	<h1><font color="#FFFFFF" face="Algerian">DoT</font></h1>
+	<h3><span style="font-weight: 400"><i><font color="#FFFF00">It's a Complete Online Training & Support</font></i></span></h3>
+		<h3>Public IP Address of user is:</h3>
+
+	
+			<p id="gfg"></p>
+
+	</center>
+</body>
+
+</html>
